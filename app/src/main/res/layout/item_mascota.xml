@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF">
+
+        <!-- Foto de la mascota -->
+        <ImageView
+            android:id="@+id/imgMascota"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+
+            android:contentDescription="Foto mascota"
+            android:scaleType="centerCrop"
+            android:background="@drawable/gato"
+            android:padding="8dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Información de la mascota -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Nombre -->
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333"/>
+
+            <!-- Especie / Raza -->
+            <TextView
+                android:id="@+id/tvEspecieRaza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Especie - Raza"
+                android:textSize="14sp"
+                android:textColor="#7B2CBF"
+                android:layout_marginTop="2dp"/>
+
+            <!-- Edad y Peso -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <!-- Chip Edad -->
+                <TextView
+                    android:id="@+id/tvEdad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 años"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/chip_purple"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:layout_marginEnd="8dp"/>
+
+                <!-- Chip Peso -->
+                <TextView
+                    android:id="@+id/tvPeso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 kg"
+                    android:textSize="12sp"
+                    android:textColor="#7B2CBF"
+                    android:background="@drawable/chip_purple_outline"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:layout_marginEnd="8dp"/>
+
+                <!-- Chip Color -->
+                <TextView
+                    android:id="@+id/tvColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Negro"
+                    android:textSize="12sp"
+                    android:textColor="#7B2CBF"
+                    android:background="@drawable/chip_purple_outline"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Flecha -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="32sp"
+            android:textColor="#7B2CBF"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

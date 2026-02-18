@@ -28,6 +28,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.mascotas.MascotasActivity"
+            android:exported="false" />
+
         <!-- MainActivity (sin intent-filter) -->
         <activity
             android:name=".MainActivity"

@@ -7,5 +7,6 @@ data class Mascota(
     val raza: String,
     val edad: Int,
     val peso: Double,
+    val color: String,
     val fotoUrl: String? = null
 )
