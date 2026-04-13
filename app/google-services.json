@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "892734209961",
+    "project_id": "vetpaw-d8439",
+    "storage_bucket": "vetpaw-d8439.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892734209961:android:382c71dcf10a8801ff8eb8",
+        "android_client_info": {
+          "package_name": "com.VetPaw.Veterinaria"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ-PvEXcImWZwKEJM9VGjCyIoEDvJEo04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

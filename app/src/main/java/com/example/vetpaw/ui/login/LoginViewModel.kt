@@ -3,8 +3,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.vetpaw.data.api.LoginRequest
 import com.example.vetpaw.data.api.RetrofitClient
-import com.example.vetpaw.data.api.VeterinariaAPI
+import com.example.vetpaw.data.api.VeterinariaApi
 import kotlinx.coroutines.launch
 
 class LoginViewModel: ViewModel() {
@@ -31,7 +32,7 @@ class LoginViewModel: ViewModel() {
             try{
                 _loading.value = true
                 val response = RetrofitClient.api.login(
-                    VeterinariaAPI.LoginRequest(documento, password)
+                    credentials = LoginRequest(documento, password)
                 )
                 _loginResult.value = LoginResult.Success(response.token, response.usuario)
 

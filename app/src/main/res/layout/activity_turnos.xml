@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F5F0FA">
+
+    <!-- Header morado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_purple"
+        android:padding="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Botón volver -->
+        <TextView
+            android:id="@+id/btnVolver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹"
+            android:textSize="32sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis Turnos"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/tvSubtitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Próximas citas"
+                android:textSize="14sp"
+                android:textColor="#E0D5F0"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Filtros (opcional) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filtrar por:"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginEnd="12dp"/>
+
+        <Button
+            android:id="@+id/btnTodos"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Todos"
+            android:textSize="12sp"
+            android:background="@drawable/chip_purple"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="8dp"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:id="@+id/btnProximos"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Próximos"
+            android:textSize="12sp"
+            android:background="@drawable/chip_purple_outline"
+            android:textColor="#7B2CBF"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </LinearLayout>
+
+    <!-- Loading -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Mensaje vacío -->
+    <LinearLayout
+        android:id="@+id/layoutVacio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/ic_menu_my_calendar"
+            app:tint="#CCCCCC"
+            android:contentDescription="Sin turnos"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No tienes turnos programados"
+            android:textSize="16sp"
+            android:textColor="#999999"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <!-- Lista de turnos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTurnos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="8dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>

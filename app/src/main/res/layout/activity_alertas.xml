@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F5F0FA">
+
+    <!-- Header morado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_purple"
+        android:padding="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnVolver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹"
+            android:textSize="32sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis Alertas"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recordatorios y notificaciones"
+                android:textSize="14sp"
+                android:textColor="#E0D5F0"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvBadgeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/circle_purple"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:backgroundTint="#E91E63"/>
+
+    </LinearLayout>
+
+    <!-- Filtros -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chipTodas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Todas"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/chip_purple"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chipPendientes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pendientes"
+                android:textSize="14sp"
+                android:textColor="#7B2CBF"
+                android:background="@drawable/chip_purple_outline"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chipVacunas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vacunas"
+                android:textSize="14sp"
+                android:textColor="#7B2CBF"
+                android:background="@drawable/chip_purple_outline"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chipControles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Controles"
+                android:textSize="14sp"
+                android:textColor="#7B2CBF"
+                android:background="@drawable/chip_purple_outline"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="32dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutVacio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/ic_dialog_info"
+            app:tint="#CCCCCC"
+            android:contentDescription="Sin alertas"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No tienes alertas"
+            android:textSize="16sp"
+            android:textColor="#999999"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAlertas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="8dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>

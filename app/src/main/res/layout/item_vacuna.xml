@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <!-- Fila superior: nombre vacuna + estado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <!-- Ícono -->
+            <TextView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:text="💉"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:background="@drawable/circle_purple"
+                android:layout_marginEnd="12dp"/>
+
+            <!-- Nombre vacuna -->
+            <TextView
+                android:id="@+id/tvNombreVacuna"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nombre Vacuna"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A2E"/>
+
+            <!-- Badge estado -->
+            <TextView
+                android:id="@+id/tvEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PENDIENTE"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/chip_purple"/>
+
+        </LinearLayout>
+
+        <!-- Divisor -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0E6FF"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Mascota -->
+        <TextView
+            android:id="@+id/tvMascota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🐾 Mascota"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- Fecha próxima -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📅 "
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tvFechaProxima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Próxima: --/--/----"
+                android:textSize="14sp"
+                android:textColor="#7B2CBF"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
